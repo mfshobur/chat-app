@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "86050057399",
+    "project_id": "chat-app-fe596",
+    "storage_bucket": "chat-app-fe596.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86050057399:android:d6b1736334e8167b1df132",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86050057399-ee72unkigceapd26lv968apupn137mv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGB53xyLGwhvmXQzccliutd8tgm1BG8wQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86050057399-ee72unkigceapd26lv968apupn137mv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
