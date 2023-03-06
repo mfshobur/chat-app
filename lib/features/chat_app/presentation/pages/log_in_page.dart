@@ -1,3 +1,4 @@
+import 'package:chat_app/features/chat_app/presentation/pages/home_page.dart';
 import 'package:chat_app/features/chat_app/presentation/pages/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -130,7 +131,15 @@ class _LogInPageState extends State<LogInPage> {
             height: 40,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ),
+                  (route) => false,
+                );
+              },
               child: const Text('Log In'),
             ),
           ),
