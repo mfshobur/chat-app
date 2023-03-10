@@ -1,4 +1,5 @@
 import 'package:chat_app/core/theme/theme.dart';
+import 'package:chat_app/features/chat_app/presentation/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       case 3:
         return SizedBox();
       default:
-        return SizedBox();
+        return HomeScreen();
     }
   }
 
