@@ -1,3 +1,4 @@
+import 'package:chat_app/features/chat_app/presentation/pages/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/theme.dart';
@@ -12,7 +13,13 @@ class ChatTile extends StatelessWidget {
     final color = Theme.of(context).colorScheme;
 
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ChatScreen(),
+            ));
+      },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
         margin: const EdgeInsets.symmetric(vertical: 6.0),
