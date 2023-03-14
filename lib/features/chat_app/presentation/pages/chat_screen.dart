@@ -59,17 +59,17 @@ class _ChatScreenState extends State<ChatScreen> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => FriendsProfilePage(),
+                builder: (context) => const FriendsProfilePage(),
               ),
             );
           },
           child: Row(
             children: [
-              Placeholder(
+              const Placeholder(
                 fallbackHeight: 48,
                 fallbackWidth: 48,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
@@ -129,23 +129,23 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 bottom: 64,
               ),
               padding: const EdgeInsets.all(8.0),
               child: SingleChildScrollView(
                 controller: scrollController,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
-                    SendChatBubble(text: 'efjeifiejf'),
-                    ReceivedChatBubble(
+                    const SendChatBubble(text: 'efjeifiejf'),
+                    const ReceivedChatBubble(
                         text:
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
-                    ReceivedChatBubble(
+                    const ReceivedChatBubble(
                         text:
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
-                    ReceivedChatBubble(
+                    const ReceivedChatBubble(
                         text:
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
                     ReceivedChatBubble(
@@ -180,7 +180,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             );
                           }
                         },
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Write a message...',
                         ),

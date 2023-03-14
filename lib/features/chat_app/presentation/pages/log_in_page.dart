@@ -1,8 +1,6 @@
 import 'package:chat_app/features/chat_app/presentation/pages/home_page.dart';
 import 'package:chat_app/features/chat_app/presentation/pages/sign_up_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../../../../core/theme/theme.dart';
 

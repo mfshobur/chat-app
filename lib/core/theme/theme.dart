@@ -18,10 +18,12 @@ Color backgroundGradient = const Color(0xfff4f4f4);
 class AppTheme {
   static final ThemeData theme = ThemeData(
     colorScheme: ColorScheme.light(
-      primary: Color(0xff2F80ED),
+      background: Colors.white,
+      onBackground: textPrimary,
+      primary: const Color(0xff2F80ED),
       onPrimary: Colors.white,
       surface: Colors.white,
-      surfaceVariant: Color.fromARGB(255, 218, 218, 219),
+      surfaceVariant: const Color.fromARGB(255, 218, 218, 219),
       onSurfaceVariant: textPrimary,
       onSurface: textSecondary,
     ),

@@ -1,8 +1,7 @@
 import 'package:chat_app/core/theme/theme.dart';
 import 'package:chat_app/features/chat_app/presentation/pages/home_screen.dart';
+import 'package:chat_app/features/chat_app/presentation/pages/settings_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,13 +16,13 @@ class _HomePageState extends State<HomePage> {
   Widget screen() {
     switch (currentScreen) {
       case 1:
-        return SizedBox();
+        return const SizedBox();
       case 2:
-        return SizedBox();
+        return const SizedBox();
       case 3:
-        return SizedBox();
+        return const SettingsScreen();
       default:
-        return HomeScreen();
+        return const HomeScreen();
     }
   }
 

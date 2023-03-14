@@ -17,7 +17,7 @@ class ChatTile extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ChatScreen(),
+              builder: (context) => const ChatScreen(),
             ));
       },
       child: Container(
@@ -26,7 +26,7 @@ class ChatTile extends StatelessWidget {
         child: Row(
           children: [
             Stack(
-              children: [
+              children: const  [
                 Placeholder(
                   fallbackHeight: 48,
                   fallbackWidth: 48,
@@ -50,14 +50,14 @@ class ChatTile extends StatelessWidget {
                   const SizedBox(
                     height: 8,
                   ),
-                  Text('Pls take a look at the images.')
+                  const Text('Pls take a look at the images.')
                 ],
               ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text('18.31'),
+                const Text('18.31'),
                 const SizedBox(
                   height: 6,
                 ),

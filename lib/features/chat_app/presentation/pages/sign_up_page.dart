@@ -1,8 +1,6 @@
 import 'package:chat_app/core/theme/theme.dart';
 import 'package:chat_app/features/chat_app/presentation/pages/log_in_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
