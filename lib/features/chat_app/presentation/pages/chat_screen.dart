@@ -1,4 +1,5 @@
 import 'package:chat_app/core/theme/theme.dart';
+import 'package:chat_app/features/chat_app/presentation/pages/friends_profile_page.dart';
 import 'package:chat_app/features/chat_app/presentation/widgets/received_chat_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -19,6 +20,13 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     scrollController = ScrollController();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      scrollController.jumpTo(
+        scrollController.position.maxScrollExtent,
+        // duration: const Duration(milliseconds: 10),
+        // curve: Curves.easeOut,
+      );
+    });
     super.initState();
   }
 
@@ -46,35 +54,45 @@ class _ChatScreenState extends State<ChatScreen> {
             Navigator.pop(context);
           },
         ),
-        title: Row(
-          children: [
-            Placeholder(
-              fallbackHeight: 48,
-              fallbackWidth: 48,
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Fullsnack Designer',
-                  style: TextStyle(
-                    color: color.onSurface,
+        title: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FriendsProfilePage(),
+              ),
+            );
+          },
+          child: Row(
+            children: [
+              Placeholder(
+                fallbackHeight: 48,
+                fallbackWidth: 48,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Fullsnack Designer',
+                    style: TextStyle(
+                      color: color.onSurface,
+                    ),
                   ),
-                ),
-                Text(
-                  'Online',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: color.onSurface,
-                    fontWeight: fontNormal,
+                  Text(
+                    'Online',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: color.onSurface,
+                      fontWeight: fontNormal,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
         actions: [
           Image.asset(
@@ -117,6 +135,7 @@ class _ChatScreenState extends State<ChatScreen> {
               padding: const EdgeInsets.all(8.0),
               child: SingleChildScrollView(
                 controller: scrollController,
+                physics: BouncingScrollPhysics(),
                 child: Column(
                   children: [
                     SendChatBubble(text: 'efjeifiejf'),
@@ -152,7 +171,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         onTap: () async {
                           if (scrollController.position.pixels ==
                               scrollController.position.maxScrollExtent) {
-                            await Future.delayed(const Duration(milliseconds: 350));
+                            await Future.delayed(
+                                const Duration(milliseconds: 350));
                             scrollController.jumpTo(
                               scrollController.position.maxScrollExtent,
                               // duration: Duration(milliseconds: 100),
